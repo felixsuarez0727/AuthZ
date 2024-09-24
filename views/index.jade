@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  !DOCTYPE html
+  html(lang="es")
+    head
+      meta(charset="UTF-8")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0")
+      title Login With Google
+      link(rel="stylesheet" href="style.css")
+      script(src="https://accounts.google.com/gsi/client" async defer)
+      link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")
+    body
+      .container
+        h2 Login
+        #googleSignInButton
+          img(src="/images/cromo.png" alt="Google logo")
+          | Login with Google
+        #g_id_onload(
+          data-client_id="TU_CLIENT_ID_DE_GOOGLE"
+          data-callback="handleCredentialResponse"
+        )
+      script(src="login.js")

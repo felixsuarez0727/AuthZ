@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <h2>Login</h2>
+        <a href="/auth/google" id="googleSignInButton">
+            <img src="cromo.png" alt="Google logo">
+            Login with Google
+        </a>
+        <p>¿You don't have an account? <a href="#" id="showRegister">Register</a></p>
+    </div>
+
+    <div class="container" id="registerContainer" style="display: none;">
+        <h2>Record</h2>
+        <form id="registerForm">
+            <input type="email" id="registerEmail" placeholder="Email" required>
+            <button type="button" id="registerCustomer">Register as a Client</button>
+            <button type="button" id="registerAdmin">Register as a admin</button>
+        </form>
+        <p>¿Do you already have an account? <a href="#" id="showLogin">Login</a></p>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>
